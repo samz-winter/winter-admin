@@ -38,7 +38,7 @@ bot.on('message', async message => {
   let samzID = '111980412296839168'
   let benzID = '213091147059429393'
 
-  let errorText = `**${winterAdmin} is not for public use.\nPlease DM ${winterBot} if you need help.**`
+  let errorText = `**You are not authorized to use ${winterAdmin}. Please DM ${winterBot} if you need help.**`
 
   if(!msg.startsWith(prefix)) return;
   if(message.author.bot) return;
@@ -46,11 +46,8 @@ bot.on('message', async message => {
   if(msg.startsWith(prefix)) {
     // if(message.author.id !== benzID) {
     if(message.author.id !== samzID) {
-      let embed = new Discord.RichEmbed()
-        .setColor(0x37a0dc)
-        .setDescription(errorText);
-        message.author.send({embed: embed});
-        // message.channel.send(`<@!` + message.author.id + `>` + ` **You have encountered an H2IK error! Check your DMs**`);
+      message.author.send(errorText);
+      // message.channel.send(`<@!` + message.author.id + `>` + ` **You have encountered an H2IK error! Check your DMs**`);
       return;
     }
   }
@@ -58,14 +55,11 @@ bot.on('message', async message => {
 /* NOT WORKING
   // if message mentions winter-admin and author not samzgr8
   if(msg.startsWith.user.id === '419686533038080003') {
-    // if message author not samzgr8
-    if(message.author.id !== benzID) {
-    // if(message.author.id !== samzID) {
-      let embed = new Discord.RichEmbed()
-        .setColor(0x37a0dc)
-        .setDescription(errorText);
-        // message.author.send({embed: embed});
-        message.channel.send(`<@!` + message.author.id + `>` + ` **You have encountered an H2IK error! Check your DMs**`);
+    // if(message.author.id !== benzID) {
+    if(message.author.id !== samzID) {
+      // message.author.send({embed: embed});
+      // message.channel.send(`<@!` + message.author.id + `>` + ` **You have encountered an H2IK error! Check your DMs**`);
+      message.channel.send(errorText);
       return;
     }
   }
