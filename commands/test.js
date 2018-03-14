@@ -3,7 +3,7 @@ const Discord = module.require('discord.js');
 // const testText = '::gives ' + `<@!` + message.author.id + `>`  + ' the side-eye.::'
 
 module.exports.run = async (bot, message, args) => {
-  let samzUser = client.users.get("111980412296839168");
+  let samzUser = bot.users.get("111980412296839168");
   let testText = '::gives ' + `<@!` + message.author.id + `>` + ' the side-eye.::'
   let testText2 = 'For free cookies, visit ' + message.guild.channels.find("name", "setec_astronomy") + ' now, or contact ' + message.guild.members.get("111980412296839168") + ' as soon as he logs in.'
   let testText3 = '**Game Communities**\n'
