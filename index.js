@@ -44,8 +44,8 @@ bot.on('message', async message => {
   if(message.author.bot) return;
   // if message contains command prefix and author not samzgr8
   if(msg.startsWith(prefix)) {
-    if(message.author.id !== benzID) {
-    // if(message.author.id !== samzID) {
+    // if(message.author.id !== benzID) {
+    if(message.author.id !== samzID) {
       let embed = new Discord.RichEmbed()
         .setColor(0x37a0dc)
         .setDescription(errorText);
