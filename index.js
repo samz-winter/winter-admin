@@ -38,7 +38,7 @@ bot.on('message', async message => {
   let samzID = '111980412296839168'
   let benzID = '213091147059429393'
 
-  let errorText = `**You are not authorized to use ${winterAdmin}. Please DM ${winterBot} if you need help.**`
+  let errorText = `<@!` + message.author.id + `>` + `You are not authorized to use ${winterAdmin}.\nPlease DM ${winterBot} if you need help.`
 
   if(!msg.startsWith(prefix)) return;
   if(message.author.bot) return;
@@ -46,8 +46,8 @@ bot.on('message', async message => {
   if(msg.startsWith(prefix)) {
     if(message.author.id !== benzID) {
     // if(message.author.id !== samzID) {
-      message.author.send(errorText);
-      // message.channel.send(`<@!` + message.author.id + `>` + ` **You have encountered an H2IK error! Check your DMs**`);
+      // message.author.send(errorText);
+      message.channel.send(errorText);
       return;
     }
   }
