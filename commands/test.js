@@ -11,13 +11,13 @@ module.exports.run = async (bot, message, args) => {
 + '• If you need to contact a community Captain, you can mention them by role (e.g. ' + message.guild.roles.find("name", "captain: rocket league") + ').\n'
 + '• See ' + message.guild.channels.get("408999214433959937") + ' for instructions on how to add yourself to a game community.\n\n'
 + 'Then tell ' + message.guild.members.get("213091147059429393") + ' to suck it!!'
-
+  let testText4 = `client.users.get("111980412296839168") is cool.`
   // BEGIN RICH EMBED
   let embed = new Discord.RichEmbed()
     // .setTitle()
     // .setAuthor()
     .setColor(0x37a0dc)
-    .setDescription(testText);
+    .setDescription(testText4);
     message.channel.send({embed: embed});
     // message.channel.send("★  https://discord.gg/jwXhjSN  ★", {embed: embed});
 }
