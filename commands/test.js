@@ -6,13 +6,12 @@ module.exports.run = async (bot, message, args) => {
   
   let testText = '::gives ' + `<@!` + message.author.id + `>` + ' the side-eye.::'
   let testText2 = `${samzUser} is cool.`
-  let testText3 = `# Sam is not cool.`
   // BEGIN RICH EMBED
   let embed = new Discord.RichEmbed()
     .setColor(0x37a0dc)
-    .setDescription(testText3);
-    message.channel.send({embed: embed});
-    // message.channel.send(testText3);
+    .setDescription(testText2);
+    // message.channel.send({embed: embed});
+    message.channel.send(testText2);
 }
 
 module.exports.help = {
