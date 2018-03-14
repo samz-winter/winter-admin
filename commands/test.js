@@ -2,7 +2,7 @@ const Discord = module.require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
   let samzUser = bot.users.get("111980412296839168");
-  let emojiBlocked = message.server.roles.get("421358575458451457");
+  let emojiBlocked = message.guild.roles.get("421358575458451457");
   
   let testText = '::gives ' + `<@!` + message.author.id + `>` + ' the side-eye.::'
   let testText2 = `${samzUser} is cool.`
