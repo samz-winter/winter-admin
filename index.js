@@ -44,8 +44,8 @@ bot.on('message', async message => {
   if(message.author.bot) return;
   // if message contains command prefix and author not samzgr8
   if(msg.startsWith(prefix)) {
-    if(message.author.id !== benzID) {
-    // if(message.author.id !== samzID) {
+    // if(message.author.id !== benzID) {
+    if(message.author.id !== samzID) {
       // message.author.send(errorText);
       message.channel.send(errorText);
       return;
