@@ -10,9 +10,9 @@ module.exports.run = async (bot, message, args) => {
   // BEGIN RICH EMBED
   let embed = new Discord.RichEmbed()
     .setColor(0x37a0dc)
-    .setDescription(testText2);
-    // message.channel.send({embed: embed});
-    message.channel.send(testText3);
+    .setDescription(testText3);
+    message.channel.send({embed: embed});
+    // message.channel.send(testText3);
 }
 
 module.exports.help = {
