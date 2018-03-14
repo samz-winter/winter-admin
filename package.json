@@ -1,0 +1,14 @@
+{
+  "name": "winter-admin",
+  "version": "1.0.0",
+  "description": "Administrative bot for the WINTER Clan Discord server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Samuel Alarcon",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.1"
+  }
+}
