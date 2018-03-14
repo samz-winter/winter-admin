@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
   
   let testText = '::gives ' + `<@!` + message.author.id + `>` + ' the side-eye.::'
   let testText2 = `${samzUser} is cool.`
-  let testText3 = `${emojiBlocked} is not cool.`
+  let testText3 = `# Sam is not cool.`
   // BEGIN RICH EMBED
   let embed = new Discord.RichEmbed()
     .setColor(0x37a0dc)
@@ -21,16 +21,14 @@ module.exports.help = {
 
 /*
 Members:
-winter-bot = message.guild.members.get("420054493250584586")
-samzgr8 = message.guild.members.get("111980412296839168")
-freeseus = message.guild.members.get("213091147059429393")
+winter-bot = bot.users.get("420054493250584586")
+samzgr8 = bot.users.get("111980412296839168")
+freeseus = bot.users.get("213091147059429393")
 
 Channels:
 message.guild.channels.get("420361525321138176")
 
 Roles:
 message.server.roles.find("name", "captain: club penguin")
-
-let emojiBlocked = bot.roles.get("421358575458451457");
-421358575458451457  // emoji-blocked
+message.guild.roles.get("421358575458451457") // emoji-blocked
 */
