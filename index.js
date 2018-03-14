@@ -22,6 +22,8 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
+bot.login(process.env.BOT_TOKEN);
+
 bot.on('ready', () => {
   console.log(`${bot.user.username} Bot Online!`);
 });
@@ -79,5 +81,3 @@ bot.on('message', async message => {
     console.log(`${message.author.tag} ran the command !${cmd}`);
   }
 });
-
-bot.login(process.env.BOT_TOKEN);
