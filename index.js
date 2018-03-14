@@ -32,8 +32,8 @@ bot.on('message', async message => {
   let args = message.content.slice(prefix.length).trim().split(' ');
   let cmd = args.shift().toLowerCase();
 
-  let winterAdmin = message.guild.members.get("419686533038080003");
-  let winterBot = message.guild.members.get("420054493250584586");
+  let winterAdmin = bot.users.get("419686533038080003");
+  let winterBot = bot.users.get("420054493250584586");
 
   let samzID = '111980412296839168'
   let benzID = '213091147059429393'
@@ -44,8 +44,8 @@ bot.on('message', async message => {
   if(message.author.bot) return;
   // if message contains command prefix and author not samzgr8
   if(msg.startsWith(prefix)) {
-    // if(message.author.id !== benzID) {
-    if(message.author.id !== samzID) {
+    if(message.author.id !== benzID) {
+    // if(message.author.id !== samzID) {
       let embed = new Discord.RichEmbed()
         .setColor(0x37a0dc)
         .setDescription(errorText);
