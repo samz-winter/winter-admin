@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-// const botSettings = require('./botsettings.json');
 
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
@@ -50,8 +49,8 @@ bot.on('message', async message => {
       let embed = new Discord.RichEmbed()
         .setColor(0x37a0dc)
         .setDescription(errorText);
-        // message.author.send({embed: embed});
-        message.channel.send(`<@!` + message.author.id + `>` + ` **You have encountered an H2IK error! Check your DMs**`);
+        message.author.send({embed: embed});
+        // message.channel.send(`<@!` + message.author.id + `>` + ` **You have encountered an H2IK error! Check your DMs**`);
       return;
     }
   }
