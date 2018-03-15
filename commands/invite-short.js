@@ -2,7 +2,7 @@ const Discord = module.require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
   let inviteText = 'Invite link updated MARCH.14.2018\n'
-+ 'The previous link has been expired.\n\n'
++ 'The previous link is no longer valid.\n\n'
 + '**Please refresh all active recruiting posts.**'
   let embed = new Discord.RichEmbed()
     .setColor(0x37a0dc)
