@@ -17,11 +17,12 @@ module.exports.run = async (bot, message, args) => {
     .setFooter(burnoutFooter);
     message.channel.send({embed: embed});
     // message.channel.send(testText2);
-}
+};
 
 module.exports.help = {
   name: "test"
-}
+  description: "This is a test command... for testing."
+};
 
 /*
 Members:
