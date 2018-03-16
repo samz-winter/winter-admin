@@ -2,7 +2,7 @@ const Discord = module.require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
   let reason = args.slice(1).join(' ');
-  let user = message.mention.users.first();
+  let user = message.mentions.users.first();
   let adminLog = bot.channels.get('423825546087235585');
   let muteRole = bot.guild.roles.get("409001955290120192") // currently @major
 
@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
   if(message.mentions.users.size < 1) return message.reply('You must mention someone to mute.').catch(console.error);
 
   message.guild.member(user).addRole(muteRole).then(() => {
-    adminLog.message.send(`${user} has been muted by <@!message.author.id>.`);
+    adminLog.message.send(`${user} has been muted by <@!message.author.id> for ${reason}.`);
   });
 }
 
