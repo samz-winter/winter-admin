@@ -2,7 +2,7 @@ const Discord = module.require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
   let reason = args.slice(1).join(' ');
-  let user = message.mention.user.first();
+  let user = message.mention.users.first();
   let adminLog = bot.channels.get('423825546087235585');
   let muteRole = bot.guild.roles.get("409001955290120192") // currently @major
 
