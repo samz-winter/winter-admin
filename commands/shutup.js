@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
   if(message.mentions.users.size < 1) return message.reply('You must mention someone to mute.').catch(console.error);
 
   message.guild.member(user).addRole(muteRole).then(() => {
-    adminLog.send(`${user} has been muted by <@!message.author.id> for ${reason}.`);
+    adminLog.send(`${user} has been muted by` + `<@!` + message.author.id + `>` + `for ${reason}.`);
   });
 }
 
