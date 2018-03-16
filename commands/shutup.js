@@ -3,7 +3,7 @@ const Discord = module.require('discord.js');
 module.exports.run = async (bot, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
-  let adminLog = bot.channels.get('423825546087235585');
+  let adminLog = bot.channels.get("423825546087235585");
   let muteRole = bot.guilds.roles.get("409001955290120192") // currently @major
 
   if(!adminLog) return message.reply('I cannot find an Admin Log channel.').catch(console.error);
