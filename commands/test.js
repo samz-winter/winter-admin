@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
   name: "test"
-  description: "This is a test command... for testing."
+//   description: "This is a test command... for testing."
 }
 
 /*
