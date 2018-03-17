@@ -11,10 +11,19 @@ module.exports.run = async (bot, message, args) => {
   if(message.mentions.users.size < 1) return message.reply('You must mention someone to mute.').catch(console.error);
   if(reason.length < 1) return message.reply('You must enter a reason.').catch(console.error);
   if(!adminLog) return message.reply('I cannot find an Admin Log channel.').catch(console.error);
+  if(reason !== "voice" || "text")
 
-  if(msg.startsWith(prefix + "warn") && reason === "voice") {
+  if(msg.startsWith(prefix + "ping") && reason === "voice") {
     directMessage.send(`${user} should read the voice channel guidelines.`);
     adminLog.send(`${user} has been warned via DM Re: Voice Channels by ` + `<@!` + message.author.id + `>`);
+    // message.author.send(errorText);
+    // message.channel.send(errorText);
+    return;
+    };
+
+  if(msg.startsWith(prefix + "ping") && reason === "text") {
+    directMessage.send(`${user} should read the text channel guidelines.`);
+    adminLog.send(`${user} has been warned via DM Re: Text Channels by ` + `<@!` + message.author.id + `>`);
     // message.author.send(errorText);
     // message.channel.send(errorText);
     return;
@@ -22,5 +31,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "warn"
+  name: "ping"
 }
