@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
   if(reason.length < 1) return message.reply('You must enter a reason.').catch(console.error);
   if(!adminLog) return message.reply('I cannot find an Admin Log channel.').catch(console.error);
   
-  if(msg.startsWith(prefix + "ping") && reason !== "voice" || "text") {
+  if(msg.startsWith(prefix + "ping") && reason !== ("voice" || "text")) {
     message.author.send("The following reasons can be used to ping a user:\n```\nvoice\ntext\n```");
   };
 
