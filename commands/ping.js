@@ -11,8 +11,9 @@ module.exports.run = async (bot, message, args) => {
   if(message.mentions.users.size < 1) return message.reply('You must mention someone to mute.').catch(console.error);
   if(reason.length < 1) return message.reply('You must enter a reason.').catch(console.error);
   if(!adminLog) return message.reply('I cannot find an Admin Log channel.').catch(console.error);
-  if(reason !== "voice" || "text") {
-    message.author.send("The following reasons can be used for pinging a user:\n```\nvoice\ntext\n```");
+  
+  if(msg.startsWith(prefix + "ping") && reason !== "voice" || "text") {
+    message.author.send("The following reasons can be used to ping a user:\n```\nvoice\ntext\n```");
   };
 
   if(msg.startsWith(prefix + "ping") && reason === "voice") {
