@@ -1,4 +1,5 @@
 const Discord = module.require('discord.js');
+const prefix = '!';
 
 module.exports.run = async (bot, message, args) => {
   let msg = message.content.toLowerCase();
