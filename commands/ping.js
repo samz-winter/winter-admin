@@ -19,6 +19,8 @@ module.exports.run = async (bot, message, args) => {
 + '**Repeated reminders may result in the loss of your Voice Channel privileges.**'
   
   let textPing = '• **Winter Community Text Channels** are titled by topic.  Please keep conversations in their appropriate channels (e.g. anything about Monster Hunter should be posted in ' + `${monsterHunterChat}` + '; anything about music should be posted in ' + `${musicChat}` + ', etc).'
+
+  let guidelinesPing = '• **Winter Community Guidelines**'
   
   if(msg.startsWith(prefix + "ping")) {
     if(reason === "voice") {
@@ -26,10 +28,9 @@ module.exports.run = async (bot, message, args) => {
       directMessage.send(voicePing);
       adminLog.send(`<@!` + message.author.id + `>` + ` has pinged ${user} \nRe: Voice Channels`);
     return;
-    }else if(reason === "text") {
-      message.channel.send(textPing);
-      // directMessage.send(textPing);
-      // adminLog.send(`<@!` + message.author.id + `>` + ` has pinged ${user} \nRe: Text Channels`);
+    }else if(reason === "guidelines") {
+      directMessage.send(guidelinesPing);
+      adminLog.send(`<@!` + message.author.id + `>` + ` has pinged ${user} \nRe: Guidelines`);
       return;
     }else {
       let embed = new Discord.RichEmbed()
@@ -38,6 +39,11 @@ module.exports.run = async (bot, message, args) => {
         // message.channel.send({embed: embed});
       message.author.send(embed);
     };
+  }
+
+  if(msg.startsWith(prefix + "ping text")) {
+    message.channel.send(textPing);
+    return;
   }
 }
 
