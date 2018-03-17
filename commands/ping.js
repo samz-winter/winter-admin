@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
   if(reason.length < 1) return message.reply('You must enter a reason.').catch(console.error);
   if(!adminLog) return message.reply('I cannot find an Admin Log channel.').catch(console.error);
   
-  if(msg.startsWith(prefix + "ping")) => {
+  if(msg.startsWith(prefix + "ping")) {
     if(reason === "voice") {
     directMessage.send(`${user} should read the voice channel guidelines.`);
     adminLog.send(`${user} has been pinged via DM Re: Voice Channels by ` + `<@!` + message.author.id + `>`);
