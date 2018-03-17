@@ -1,6 +1,7 @@
 const Discord = module.require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
+  let msg = message.content.toLowerCase();
   let user = message.mentions.users.first();
   let reason = args.slice(1).join(' ');
   let adminLog = message.guild.channels.get("423825546087235585"); // #poked_the_bear
