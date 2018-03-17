@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
   let musicChat = message.guild.channels.get("414137151467421697"); // #music
 
   // if(message.mentions.users.size < 1) return message.reply('You must mention someone to ping.').catch(console.error);
-  if(reason.length < 1) return message.reply('You must enter a reason.').catch(console.error);
+  // if(reason.length < 1) return message.reply('You must enter a reason.').catch(console.error);
   if(!adminLog) return message.reply('I cannot find an Admin Log channel.').catch(console.error);
   
   let voicePing = '• **Winter Community Voice Channels** are reserved for community members gaming *together* or participating in community social events. In order to keep as many channels available as possible, we ask that members **do not hang out in Gaming channels alone.**\n\n'
