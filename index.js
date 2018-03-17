@@ -44,10 +44,10 @@ bot.on('message', async message => {
   if(!msg.startsWith(prefix)) return;
   if(message.author.bot) return;
   // if message contains command prefix and author not samzgr8
-  if(msg.startsWith(prefix)) {
+  if(msg.startsWith(prefix) $$ !message.member.roles.get("211143245445464064")) {
     // if(message.author.id !== benzID) {
     // if(message.author.id !== samzID) {
-    if(!message.member.roles.get("211143245445464064")) {
+    // if(!message.member.roles.get("211143245445464064")) {
       // message.author.send(errorText);
       // message.channel.send(errorText);
       return;
