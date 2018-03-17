@@ -12,25 +12,23 @@ module.exports.run = async (bot, message, args) => {
   if(reason.length < 1) return message.reply('You must enter a reason.').catch(console.error);
   if(!adminLog) return message.reply('I cannot find an Admin Log channel.').catch(console.error);
   
-  if(msg.startsWith(prefix + "ping") && reason !== ("voice" || "text")) {
-    message.author.send("The following reasons can be used to ping a user:\n```\nvoice\ntext\n```");
-  };
-
-  if(msg.startsWith(prefix + "ping") && reason === "voice") {
+  if(msg.startsWith(prefix + "ping")) && => {
+    if(reason === "voice") {
     directMessage.send(`${user} should read the voice channel guidelines.`);
     adminLog.send(`${user} has been pinged via DM Re: Voice Channels by ` + `<@!` + message.author.id + `>`);
     // message.author.send(errorText);
     // message.channel.send(errorText);
     return;
-  };
-
-  if(msg.startsWith(prefix + "ping") && reason === "text") {
-    directMessage.send(`${user} should read the text channel guidelines.`);
-    adminLog.send(`${user} has been pinged via DM Re: Text Channels by ` + `<@!` + message.author.id + `>`);
-    // message.author.send(errorText);
-    // message.channel.send(errorText);
-    return;
-  };
+    }else if(reason === "text") {
+      directMessage.send(`${user} should read the text channel guidelines.`);
+      adminLog.send(`${user} has been pinged via DM Re: Text Channels by ` + `<@!` + message.author.id + `>`);
+      // message.author.send(errorText);
+      // message.channel.send(errorText);
+      return;
+    }else {
+      message.author.send("The following reasons can be used to ping a user:\n```\nvoice\ntext\n```");
+    };
+  }
 }
 
 module.exports.help = {
