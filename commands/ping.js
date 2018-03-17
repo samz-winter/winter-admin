@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
   let monsterHunterChat = message.guild.channels.get("407697254422413322"); // #monster_hunter
   let musicChat = message.guild.channels.get("414137151467421697"); // #music
 
-  if(message.mentions.users.size < 1) return message.reply('You must mention someone to mute.').catch(console.error);
+  // if(message.mentions.users.size < 1) return message.reply('You must mention someone to ping.').catch(console.error);
   if(reason.length < 1) return message.reply('You must enter a reason.').catch(console.error);
   if(!adminLog) return message.reply('I cannot find an Admin Log channel.').catch(console.error);
   
@@ -22,12 +22,14 @@ module.exports.run = async (bot, message, args) => {
   
   if(msg.startsWith(prefix + "ping")) {
     if(reason === "voice") {
-    directMessage.send(voicePing);
-    adminLog.send(`<@!` + message.author.id + `>` + ` has pinged ${user} \nRe: Voice Channels`);
+      if(message.mentions.users.size < 1) return message.reply('You must mention someone to ping.').catch(console.error);
+      directMessage.send(voicePing);
+      adminLog.send(`<@!` + message.author.id + `>` + ` has pinged ${user} \nRe: Voice Channels`);
     return;
     }else if(reason === "text") {
-      directMessage.send(textPing);
-      adminLog.send(`<@!` + message.author.id + `>` + ` has pinged ${user} \nRe: Text Channels`);
+      message.channel.send(textPing);
+      // directMessage.send(textPing);
+      // adminLog.send(`<@!` + message.author.id + `>` + ` has pinged ${user} \nRe: Text Channels`);
       return;
     }else {
       let embed = new Discord.RichEmbed()
