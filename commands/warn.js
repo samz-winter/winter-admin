@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
   if(!adminLog) return message.reply('I cannot find an Admin Log channel.').catch(console.error);
 
   if(msg.startsWith(prefix + "warn") && reason === "voice") {
-    directMessage.send(`${user} should read the voice channel guidelines.`)
+    directMessage.send(`${user} should read the voice channel guidelines.`);
     adminLog.send(`${user} has been warned via DM Re: Voice Channels by ` + `<@!` + message.author.id + `>`);
     // message.author.send(errorText);
     // message.channel.send(errorText);
