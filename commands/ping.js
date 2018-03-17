@@ -12,9 +12,13 @@ module.exports.run = async (bot, message, args) => {
   if(reason.length < 1) return message.reply('You must enter a reason.').catch(console.error);
   if(!adminLog) return message.reply('I cannot find an Admin Log channel.').catch(console.error);
   
+  let voicePing = '**Winter Community Voice Channels** are reserved for community members gaming *together* or participating in community social events. In order to keep as many channels available as possible, we ask that members **do not hang out in Gaming channels alone.**\n\n'
++ 'Please move to one of the Lobby channels, one of the LFG channels, or the AFK channel.\n\n'
++ '**Repeated reminders may result in the loss of your Voice Channel privileges.**'
+  
   if(msg.startsWith(prefix + "ping")) {
     if(reason === "voice") {
-    directMessage.send(`${user} should read the voice channel guidelines.`);
+    directMessage.send(voicePing);
     adminLog.send(`${user} has been pinged via DM Re: Voice Channels by ` + `<@!` + message.author.id + `>`);
     // message.author.send(errorText);
     // message.channel.send(errorText);
