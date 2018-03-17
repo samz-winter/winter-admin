@@ -1,5 +1,5 @@
 const Discord = module.require('discord.js');
-// const responses = require('./responses.json');
+const responses = require('./responses/responses.js');
 
 module.exports.run = async (bot, message, args) => {
   let samzUser = bot.users.get("111980412296839168");
@@ -20,8 +20,8 @@ module.exports.run = async (bot, message, args) => {
     .setDescription(burnoutText)
     .setFooter(burnoutFooter);
     // message.channel.send({embed: embed});
-    message.channel.send(testText4);
-    // message.channel.send(testText);
+    // message.channel.send(testText4);
+    message.channel.send(responses.testText6);
 }
 
 module.exports.help = {
