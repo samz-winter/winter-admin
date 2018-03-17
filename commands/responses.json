@@ -1,4 +1,4 @@
 {
   "warnVoice": "`${user}`\nthis is some ",
-  "testText": "`${samzUser} is cool.`"
+  "testText": `${samzUser} is cool.`
 }
