@@ -7,6 +7,15 @@ module.exports.run = async (bot, message, args) => {
   let reason = args.slice(1).join(' ');
   let adminLog = message.guild.channels.get("423825546087235585"); // #admin_log
   let directMessage = message.guild.member(user);
+  
+  let monsterHunterChat = message.guild.channels.get("407697254422413322"); // #monster_hunter
+  let musicChat = message.guild.channels.get("414137151467421697"); // #music
+  let textPing = '• **Winter Community Text Channels** are titled by topic.  Please keep conversations in their appropriate channels (e.g. anything about Monster Hunter should be posted in ' + `${monsterHunterChat}` + '; anything about music should be posted in ' + `${musicChat}` + ', etc).'
+
+  if(msg.startsWith(prefix + "ping text")) {
+    message.channel.send(textPing);
+    return;
+  };
 
   if(message.mentions.users.size < 1) return message.reply('You must mention someone to ping.').catch(console.error);
   if(reason.length < 1) return message.reply('You must enter a reason.').catch(console.error);
