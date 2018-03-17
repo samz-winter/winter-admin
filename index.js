@@ -37,14 +37,14 @@ bot.on('message', async message => {
 
   let samzID = '111980412296839168';
   let benzID = '213091147059429393';
-  let officerRole = message.member.roles.get("211143245445464064");
+  let officerRole = message.guild.roles.get("211143245445464064");
 
   let errorText = `<@!` + message.author.id + `>` + ` Please DM ${winterBot} if you need help.`
 
   if(!msg.startsWith(prefix)) return;
   if(message.author.bot) return;
   // if message contains command prefix and author not samzgr8
-  if(msg.startsWith(prefix) && !message.member.roles.has(officerRole)) {
+  if(msg.startsWith(prefix) && !message.author.roles.has(officerRole)) {
     // message.author.send(errorText);
     // message.channel.send(errorText);
     return;
