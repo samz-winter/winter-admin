@@ -30,7 +30,11 @@ module.exports.run = async (bot, message, args) => {
       // message.channel.send(errorText);
       return;
     }else {
-      message.author.send("The following reasons can be used to ping a user:\n```\nvoice\ntext\n```");
+      let embed = new Discord.RichEmbed()
+        .setColor(0x37a0dc)
+        .setDescription("The following reasons can be used to ping a user:\n```\nvoice\ntext\n```");
+        // message.channel.send({embed: embed});
+      message.author.send(embed);
     };
   }
 }
