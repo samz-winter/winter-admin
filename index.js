@@ -47,7 +47,7 @@ bot.on('message', async message => {
   if(msg.startsWith(prefix)) {
     // if(message.author.id !== benzID) {
     // if(message.author.id !== samzID) {
-    if(!message.member.roles.get("211143245445464064") {
+    if(!message.member.roles.get("211143245445464064")) {
       // message.author.send(errorText);
       // message.channel.send(errorText);
       return;
