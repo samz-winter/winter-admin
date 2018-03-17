@@ -19,11 +19,11 @@ module.exports.run = async (bot, message, args) => {
   
   let botHelpChat = message.guild.channels.get("420361525321138176") // #bot-help
   let winterBot = message.guild.members.get("420054493250584586") // @winter-bot
-  let helpText = '• The Winter server uses a custom bot to help community members with various tasks such as displaying upcoming events, joining/leaving game roles (game communities) and learning more about the Winter rank system. New features will be added as needed... and some are hidden, just waiting for unsuspecting users to stumble upon them.\n\n'
+  let helpPing = '• The Winter server uses a custom bot to help community members with various tasks such as displaying upcoming events, joining/leaving game roles (game communities) and learning more about the Winter rank system. New features will be added as needed... and some are hidden, just waiting for unsuspecting users to stumble upon them.\n\n'
 + '**For help, send a direct message to** ' + `${winterBot}` + ' with the word "help".\n\n'
 
   if(msg.startsWith(prefix + "ping help")) {
-    message.channel.send(textPing);
+    message.channel.send(helpPing);
     return;
   };
 
