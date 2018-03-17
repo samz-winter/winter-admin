@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   let msg = message.content.toLowerCase();
   let user = message.mentions.users.first();
   let reason = args.slice(1).join(' ');
-  let adminLog = message.guild.channels.get("423825546087235585"); // #poked_the_bear
+  let adminLog = message.guild.channels.get("423825546087235585"); // #admin_log
   let directMessage = message.guild.member(user);
 
   if(message.mentions.users.size < 1) return message.reply('You must mention someone to mute.').catch(console.error);
@@ -19,20 +19,16 @@ module.exports.run = async (bot, message, args) => {
   if(msg.startsWith(prefix + "ping")) {
     if(reason === "voice") {
     directMessage.send(voicePing);
-    adminLog.send(`${user} has been pinged via DM Re: Voice Channels by ` + `<@!` + message.author.id + `>`);
-    // message.author.send(errorText);
-    // message.channel.send(errorText);
+    adminLog.send(`<@!` + message.author.id + `>` + ` has pinged ${user} \nRe: Voice Channels`);
     return;
     }else if(reason === "text") {
       directMessage.send(`${user} should read the text channel guidelines.`);
-      adminLog.send(`${user} has been pinged via DM Re: Text Channels by ` + `<@!` + message.author.id + `>`);
-      // message.author.send(errorText);
-      // message.channel.send(errorText);
+      adminLog.send(`<@!` + message.author.id + `>` + ` has pinged ${user} \nRe: Text Channels`);
       return;
     }else {
       let embed = new Discord.RichEmbed()
         .setColor(0x37a0dc)
-        .setDescription("The following reasons can be used to ping a user:\n```\nvoice\ntext\n```");
+        .setDescription("The following reasons can be used to ping a user:\n```\nvoice\ntext\n```\nFull command example:\n```\n!ping @samzgr8#0513 voice\n```");
         // message.channel.send({embed: embed});
       message.author.send(embed);
     };
