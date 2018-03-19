@@ -4,7 +4,9 @@ module.exports = {
 + '- Invite link updated MARCH.14.2018\n'
 + '- Please refresh all active recruiting posts.\n'
 + '```\n'
+};
 
+module.exports = {
   captainText: '**THIS IS A READ-ONLY CHANNEL. For issues, please send a DM to** ' + `${samzID}` + '.\n\n'
 + 'The winter-bot `quarantine` command allows any community captain to temporarily block a user\'s server privileges until an officer can decide if the user should be kicked/banned. **This command should *only* be used for situations where a user needs to be silenced immediately.**\n\n'
 + 'If this command is used, please **send a DM with details** of the situation to ' + `${samzID}` + '.\n\n'
