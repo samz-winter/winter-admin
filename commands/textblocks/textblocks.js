@@ -1,3 +1,6 @@
+const winterBot = message.guild.members.get("420054493250584586") // @winter-bot
+const samzID = message.guild.members.get("111980412296839168") // @samzgr8
+
 module.exports = {
   inviteLinkText: '★  https://discord.gg/ExUTWT4  ★\n'
 + '```diff\n'
