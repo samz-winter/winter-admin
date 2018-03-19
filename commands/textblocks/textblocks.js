@@ -1,6 +1,4 @@
 const Discord = module.require('discord.js');
-const winterBot = message.guild.members.get("420054493250584586"); // @winter-bot
-const samzID = message.guild.members.get("111980412296839168"); // @samzgr8
 
 module.exports = {
   inviteLinkText: '★  https://discord.gg/ExUTWT4  ★\n'
@@ -11,6 +9,9 @@ module.exports = {
 };
 
 module.exports.run = async (bot, message, args) => {
+  const winterBot = message.guild.members.get("420054493250584586"); // @winter-bot
+  const samzID = message.guild.members.get("111980412296839168"); // @samzgr8
+  
   captainText: '**THIS IS A READ-ONLY CHANNEL. For issues, please send a DM to** ' + `${samzID}` + '.\n\n'
 + 'The winter-bot `quarantine` command allows any community captain to temporarily block a user\'s server privileges until an officer can decide if the user should be kicked/banned. **This command should *only* be used for situations where a user needs to be silenced immediately.**\n\n'
 + 'If this command is used, please **send a DM with details** of the situation to ' + `${samzID}` + '.\n\n'
