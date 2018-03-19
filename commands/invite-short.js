@@ -1,7 +1,8 @@
 const Discord = module.require('discord.js');
-const textblocks = require('./textblocks/textblocks.js');
+
 
 module.exports.run = async (bot, message, args) => {
+  const textblocks = require('./textblocks/textblocks.js');
   let embed = new Discord.RichEmbed()
     .setColor(0x37a0dc)
     .setDescription(textblocks.captainText)
