@@ -10,9 +10,9 @@ module.exports.run = async (bot, message, args) => {
   
   let monsterHunterChat = message.guild.channels.get("407697254422413322"); // #monster_hunter
   let musicChat = message.guild.channels.get("414137151467421697"); // #music
-  let botHelpChat = message.guild.channels.get("420361525321138176") // #bot-help
-  let winterBot = message.guild.members.get("420054493250584586") // @winter-bot
-  let samzID = message.guild.members.get("111980412296839168") // @samzgr8
+  let botHelpChat = message.guild.channels.get("420361525321138176"); // #bot-help
+  let winterBot = message.guild.members.get("420054493250584586"); // @winter-bot
+  let samzID = message.guild.members.get("111980412296839168"); // @samzgr8
   
   let helpPing = '**• Winter Community Server** uses a custom bot to help community members with various tasks such as displaying upcoming events, joining/leaving game roles (game communities) and learning more about the Winter rank system. New features will be added as needed... and some are hidden, just waiting for unsuspecting users to stumble upon them.\n\n'
 
@@ -20,8 +20,8 @@ module.exports.run = async (bot, message, args) => {
 + '**For help, send a direct message to** ' + `${winterBot}` + ' **with the word "help".**\n\n'
 
   let communitiesPing = '**• Winter Community Server** encourages members to organize into communities based on the games they play. Active games with a reasonable community size will usually have their own text channel, and each community has at least one Captain who acts as the advocate, recruiter and organizer.\n\n'
-+ 'All active members need to add themselves to at least one community role. This allows the community captains to @ mention the community as a whole for important community updates.\n\n'
-+ '• If you do not want game @ mentions at all (for any game community), please add yourself to the role @no_mentions. If you do not, and officer will be adding you to any community we see you active in.\n\n'
++ 'All active members need to add themselves to at least one community role. This allows the community captains to @ mention the community as a whole for important updates.\n\n'
++ '• If you do not want game @ mentions at all (for any game community), please add yourself to the role @no_mentions. If you do not, an officer will be adding you to any community they see you active in.\n\n'
 + '• **For instructions on how to add yourself to a community, send a direct message to** ' + `${winterBot}` + ' **with the word "games".**'
   
   let embedsPing = '**• Winter Community Video and Link Embeds:** If you are rank: Member or above, you can embed videos and links. Use your best judgment when posting links. If the embed image or video thumbnail is even remotely questionable or NSFW, your post will be deleted. If you want to post a link without the embed, wrap the link in angle brackets `like this: <https://youtu.be/dQw4w9WgXcQ>`'
