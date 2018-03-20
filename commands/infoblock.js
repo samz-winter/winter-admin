@@ -93,7 +93,7 @@ module.exports.run = async (bot, message, args) => {
 + `• **For instructions on how to add yourself to a community, send a direct message to** ${winterBot} **with the word "games".**\n\n`
 + 'Visit Winter\'s website at [winterclan.net](https://www.winterclan.net) and use your Discord credentials to log in.\n'
 
-
+/*
 // infoblock #announcements invite embed
   let embed = new Discord.RichEmbed()
     .setColor(0x37a0dc)
@@ -107,6 +107,8 @@ module.exports.run = async (bot, message, args) => {
     .setImage("https://www.reactiongifs.com/r/ksu.gif")
     .setFooter(pokedFooter);
     message.channel.send({embed: embed});
+*/
+  
 }
 
 module.exports.help = {
