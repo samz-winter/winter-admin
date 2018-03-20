@@ -36,7 +36,7 @@ module.exports.run = async (bot, message, args) => {
 
   // let captainRLRole = message.guild.roles.get("414098252569378816") @captain:RL
 
-  let infoblockBotHelp = 'The Winter server uses a custom bot to help community members with various tasks such as displaying upcoming events, joining/leaving game roles (game communities) and learning more about the Winter rank system. New features will be added as needed... and some are hidden, just waiting for unsuspecting users to stumble upon them.\n\n'
+  let postBotHelp = 'The Winter server uses a custom bot to help community members with various tasks such as displaying upcoming events, joining/leaving game roles (game communities) and learning more about the Winter rank system. New features will be added as needed... and some are hidden, just waiting for unsuspecting users to stumble upon them.\n\n'
 + `**All commands should be submitted via *direct message* to** ${winterBot}.\n\n`
 + 'Current available commands are listed below:\n'
 + '```\nhelp\ngames\njoin {game}\nleave {game}\nevents\nranks\n```\n'
@@ -45,7 +45,7 @@ module.exports.run = async (bot, message, args) => {
 + 'DM winter-bot with `help` *not* `!help`\n\n'
 + `To request help from an actual human, please **DM** ${benzID} or ${samzID}.`
 
-  let infoblockCaptain = `**THIS IS A READ-ONLY CHANNEL. For issues, please send a DM to** ${samzID}.\n\n`
+  let postCaptain = `**THIS IS A READ-ONLY CHANNEL. For issues, please send a DM to** ${samzID}.\n\n`
 + 'The winter-bot `quarantine` command allows any community captain to temporarily block a user\'s server privileges until an officer can decide if the user should be kicked/banned. **This command should *only* be used for situations where a user needs to be silenced immediately.**\n\n'
 + `If this command is used, please **send a DM with details** of the situation to ${samzID}.\n\n`
 + 'To use the winter-bot `quarantine` command, **send a DM to** ' + `${winterBot}` + ' with the following:\n\n'
@@ -53,7 +53,7 @@ module.exports.run = async (bot, message, args) => {
 + 'e.g. `quarantine samzgr8#0513`\n\n'
 + '***WARNING:*** Anyone who uses this to troll or try to be funny *will* be banned from the server. Period.'
 
-  let infoblockGuidelines = '**THE FOLLOWING COMMUNITY GUIDELINES WILL BE ENFORCED FOR ALL WINTER MEMBERS REGARDLESS OF RANK OR POSITION**\n\n'
+  let postGuidelines = '**THE FOLLOWING COMMUNITY GUIDELINES WILL BE ENFORCED FOR ALL WINTER MEMBERS REGARDLESS OF RANK OR POSITION**\n\n'
 + '**(TL;DR - "DON\'T BE A DICK")**\n\n'
 + '**Constructive Discussion** - Please keep public comments and discussions constructive. If you feel like a conversation you\'re having might be inappropriate for public discussion, or if someone tells you it definitely is, please move it to your DMs.\n\n'
 + '**SFW Policy** - Many community members keep their Discord chats open at work or on family computers. Please keep general content SFW.\n\n'
@@ -66,25 +66,25 @@ module.exports.run = async (bot, message, args) => {
 + `Guidelines are subject to change at the discretion of Winter community leadership. If you have any questions about the community guidelines, please **DM** ${samzID}.\n\n`
 + 'You can find the official Discord Community Guidelines here: <https://discordapp.com/guidelines>\n\n'
 
-  let infoblockInviteLink = '★  https://discord.gg/ExUTWT4  ★\n'
+  let postInviteLink = '★  https://discord.gg/ExUTWT4  ★\n'
 + '```diff\n- Invite link updated MARCH.14.2018\n```'
 
-  let infoblockInviteText = `The above invite link may be shared as part of any recruiting you are doing, whether amongst friends or openly (Reddit, etc). This invite directs new members to our cool ${welcomeChat} channel which acts as a splash page for the clan and server. From there, they can click through to any other public channel.\n\n`
+  let postInviteText = `The above invite link may be shared as part of any recruiting you are doing, whether amongst friends or openly (Reddit, etc). This invite directs new members to our cool ${welcomeChat} channel which acts as a splash page for the clan and server. From there, they can click through to any other public channel.\n\n`
 + '**This is the only invite link for the server.** If you see anyone in the clan asking for an invite link, direct them here. This link will be refreshed every now and then for security. Check back before sharing.\n\n'
 + '***As a warning:*** *Using this link to re-invite someone who has been kicked/banned from the server will result in your removal as well.*'
 
-  let infoblockShutupText = '**This is what happens when you annoy an officer.**'
-  let infoblockShutupFooter = 'Your privileges will be restored shortly.'
-  let infoblockShutupImg = 'https://www.reactiongifs.com/r/ksu.gif'
+  let postShutupText = '**This is what happens when you annoy an officer.**'
+  let postShutupFooter = 'Your privileges will be restored shortly.'
+  let postShutupImg = 'https://www.reactiongifs.com/r/ksu.gif'
 
-  let infoblockTimeout = '**You\'ve been placed in a temporary timeout because of something you did.**\n\n'
+  let postTimeout = '**You\'ve been placed in a temporary timeout because of something you did.**\n\n'
 + '**You probably know what it was, but an officer will be reaching out to you to discuss the situation.**\n\n'
 + `**Take this time to review the community** ${guidelinesChat}`
 
-  let infoblockUnderReview = '**YOUR MEMBERSHIP STATUS IS UNDER REVIEW.**\n\n'
+  let postUnderReview = '**YOUR MEMBERSHIP STATUS IS UNDER REVIEW.**\n\n'
 + '**ALL SERVER PRIVILEGES HAVE BEEN TEMPORARILY REVOKED. YOU WILL BE NOTIFIED BY AN OFFICER WHEN YOUR REVIEW IS COMPLETE.**'
 
-  let infoblockWelcome = '**Welcome to Winter!**  For nearly 20 years, Winter has existed as a community of friends brought together by a love of gaming across genre and platform. We currently support a variety of games on both PC and PlayStation, and maintain this Discord server for communication, planning and hanging out.\n\n'
+  let postWelcome = '**Welcome to Winter!**  For nearly 20 years, Winter has existed as a community of friends brought together by a love of gaming across genre and platform. We currently support a variety of games on both PC and PlayStation, and maintain this Discord server for communication, planning and hanging out.\n\n'
 + `**Guidelines** - We like a bit of good-natured ribbing, but we\'re not savages. You can find our full community guidelines posted in the ${guidelinesChat} channel, but the short version is "Don\'t be a dick."\n\n`
 + `**winter-bot** - The Winter server uses a custom bot to manage user-joinable roles (game communities) and provide some comic relief now and then. You can find more information about how to use winter-bot in the ${botHelpChat} channel, or you can DM ${winterBot} with the word "help"\n\n`
 + '**Game Communities** - Winter encourages members to organize into communities based on the games they play. Active games with a reasonable community size will usually have their own text channel, and each community has at least one Captain who acts as the advocate, recruiter and organizer.\n'
@@ -94,13 +94,13 @@ module.exports.run = async (bot, message, args) => {
 + 'Visit Winter\'s website at [winterclan.net](https://www.winterclan.net) and use your Discord credentials to log in.\n'
 
 /*
-// infoblock #announcements invite embed
+// post #announcements invite embed
   let embed = new Discord.RichEmbed()
     .setColor(0x37a0dc)
-    .setDescription(infoblockInviteText);
-    message.channel.send(infoblockInviteLink, {embed: embed});
+    .setDescription(postInviteText);
+    message.channel.send(postInviteLink, {embed: embed});
 
-// infoblock #shutup embed
+// post #shutup embed
   let embed = new Discord.RichEmbed()
     .setColor(0x37a0dc)
     .setDescription(pokedText)
@@ -112,5 +112,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "infoblock"
+  name: "post"
 }
