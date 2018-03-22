@@ -29,7 +29,7 @@ bot.on('ready', () => {
 
 bot.on('message', async message => {
   let msg = message.content.toUpperCase();
-  let args = message.content.slice(prefix.length).trim().split(' ');
+  let args = message.content.slice(prefix.length).trim().split(/ +/g);
   let cmd = args.shift().toLowerCase();
 
   let winterAdmin = bot.users.get("419686533038080003");
