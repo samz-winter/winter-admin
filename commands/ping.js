@@ -15,7 +15,8 @@ module.exports.run = async (bot, message, args) => {
   let samzID = message.guild.members.get("111980412296839168"); // @samzgr8
   
   let helpPing = '**• Winter Community Server** uses a custom bot to help community members with various tasks such as displaying upcoming events, joining/leaving game roles (game communities) and learning more about the Winter rank system. New features will be added as needed... and some are hidden, just waiting for unsuspecting users to stumble upon them.\n\n'
-
++ `• **For more information, send a direct message to** ${winterBot} **with the word "help".**`
+  
   let textPing = '**• Winter Community Text Channels** are titled by topic.  Please keep conversations in their appropriate channels (e.g. anything about Monster Hunter should be posted in ' + `${monsterHunterChat}` + '; anything about music should be posted in ' + `${musicChat}` + ', etc).'
 + '**For help, send a direct message to** ' + `${winterBot}` + ' **with the word "help".**\n\n'
 
