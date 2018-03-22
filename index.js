@@ -44,16 +44,7 @@ bot.on('message', async message => {
   if(!msg.startsWith(prefix)) return;
   if(message.author.bot) return;
   // if message contains command prefix and author not winterOfficer
-  // if(msg.startsWith(prefix) && !message.member.roles.has("211143245445464064")) return;
-  if(msg.startsWith(prefix)) {
-    if(!message.member.roles.has("211143245445464064")) {
-      //message.channel.send("Nope");
-      return;
-    }else if(!message.member.roles.has("409001955290120192")) {
-      //message.channel.send("Nope");
-      return;
-    };
-  };
+  if(msg.startsWith(prefix) && !message.member.roles.has("211143245445464064")) return;
 
 /* NOT WORKING
   // if message mentions winter-admin and author not samzgr8
