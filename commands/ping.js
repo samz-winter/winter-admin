@@ -62,7 +62,7 @@ module.exports.run = async (bot, message, args) => {
     if(reason === "guidelines") {
       directMessage.send(guidelinesPing);
       message.channel.send(`The mentioned user has been DM'd.`)
-      adminLog.send(`<@!` + message.author.id + `>` + ` has pinged ${user} \nRe: Guidelines`);
+      adminLog.send(`${user} has been DM'd about community guidelines.`);
       return;
     }else if(reason === "communities") {
       directMessage.send(communitiesPing);
