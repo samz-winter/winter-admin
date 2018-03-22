@@ -61,19 +61,24 @@ module.exports.run = async (bot, message, args) => {
   if(msg.startsWith(prefix + "ping")) {
     if(reason === "guidelines") {
       directMessage.send(guidelinesPing);
+      message.channel.send(`The mentioned user has been DM'd.`)
       adminLog.send(`<@!` + message.author.id + `>` + ` has pinged ${user} \nRe: Guidelines`);
       return;
     }else if(reason === "communities") {
       directMessage.send(communitiesPing);
+      message.channel.send(`The mentioned user has been DM'd.`)
       return;
     }else if(reason === "embeds") {
       directMessage.send(embedsPing);
+      message.channel.send(`The mentioned user has been DM'd.`)
       return;
     }else if(reason === "spam") {
       directMessage.send(spamPing);
+      message.channel.send(`The mentioned user has been DM'd.`)
       return;
     }else if(reason === "voice") {
       directMessage.send(voicePing);
+      message.channel.send(`The mentioned user has been DM'd.`)
       return;
     }else {
       let embed = new Discord.RichEmbed()
