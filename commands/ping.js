@@ -50,6 +50,7 @@ module.exports.run = async (bot, message, args) => {
   };
 
   if(msg.startsWith(prefix + "ping text")) {
+    message.delete();
     message.channel.send(textPing);
     return;
   };
