@@ -46,7 +46,6 @@ bot.on('message', async message => {
   // if message contains command prefix and author not samzgr8
   if(msg.startsWith(prefix) && !message.member.roles.has("211143245445464064")) return;
   if(msg.startsWith(prefix) && !message.member.roles.has("409001955290120192")) return;
-    };
 
 /* NOT WORKING
   // if message mentions winter-admin and author not samzgr8
