@@ -23,6 +23,6 @@ var embed = function(object){
 exports.responses = {
   test: function(message){
     // return embed(test(message));
-    return embed(testings.testText(message));
+    return embed(textings.testText(message));
   }
 };
