@@ -4,6 +4,7 @@ const fs = require('fs');
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 const prefix = '!';
+const responses = require('./commands/textblocks/responses.js').responses;
 
 fs.readdir("./commands/", (err, files) => {
   if(err) console.error(err);
