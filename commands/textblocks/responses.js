@@ -22,7 +22,7 @@ exports.responses = {
   test: function(bot, message, args){
     return embed(test.testText(bot, message, args));
   },
-  iInviteLink: function(bot, message, args){
-    return embed(test.iInviteLink(bot, message, args));
+  inviteLink: function(bot, message, args){
+    return embed(test.inviteLink(bot, message, args));
   }
 };
