@@ -26,6 +26,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.login(process.env.BOT_TOKEN);
 
 bot.on('ready', () => {
+  bot.user.setPresence({ game: { name: `winter-admin, created by samzgr8` }, type: 0 });
   console.log(`${bot.user.username} Bot Online!`);
 });
 
