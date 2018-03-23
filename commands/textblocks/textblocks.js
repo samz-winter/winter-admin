@@ -1,4 +1,4 @@
-// const discordjs = require('discord.js');
+const discordjs = require('discord.js');
 
 module.exports.testText = function(bot, message, args){
   let samzUser = bot.users.get("111980412296839168"); // @samzgr8
