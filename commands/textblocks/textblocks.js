@@ -1,6 +1,5 @@
-const samzUser = bot.users.get('111980412296839168');
-
 module.exports.testText = function (bot, message, args) {
+  const samzUser = bot.users.get('111980412296839168');
   // console.log(bot, message, args);
   return {
     text: [`${samzUser} was coding.\nBanging head against the desk\nWill it ever work?`], // ${samzUser}
