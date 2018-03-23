@@ -1,5 +1,5 @@
 const discordjs = require('discord.js');
-const test = require('./textblocks.js').testText;
+const test = require('./textblocks.js');
 
 var embed = function(object){
   if(typeof object !== 'object'){
@@ -20,6 +20,9 @@ var embed = function(object){
 
 exports.responses = {
   test: function(bot, message, args){
-    return embed(test(bot, message, args));
+    return embed(test.testText(bot, message, args));
+  },
+  iInviteLink: function(bot, message, args){
+    return embed(test.iInviteLink(bot, message, args));
   }
 };
