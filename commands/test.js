@@ -19,6 +19,11 @@ module.exports.run = async (bot, message, args) => {
     return;
   }
   
+   if(reason === "invite") {
+    message.channel.send(responses.inviteLink(bot, message, args))
+    return;
+  }
+  
 }
 
 module.exports.help = {
