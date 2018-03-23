@@ -1,6 +1,6 @@
 const discordjs = require('discord.js');
 
-exports.testText = function(message){
+exports.testText = function(bot, message){
   let samzUser = bot.users.get("111980412296839168"); // @samzgr8
   return {
     text: `${samzUser} was coding.\nBanging head against the desk\nWill it ever work?`,
