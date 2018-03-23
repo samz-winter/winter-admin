@@ -1,6 +1,6 @@
 const Discord = module.require('discord.js');
 // const prefix = '!';
-const responses = require('.textblocks/responses.js').responses;
+const responses = require('./textblocks/responses.js').responses;
 
 module.exports.run = async (bot, message, args) => {
   let msg = message.content.toLowerCase();
