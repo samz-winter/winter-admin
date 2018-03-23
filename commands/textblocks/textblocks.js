@@ -7,7 +7,7 @@ module.exports.testText = function (bot, message, args) {
   }
 };
 
-module.exports.iInviteLink = function (bot, message, args) {
+module.exports.inviteLink = function (bot, message, args) {
   return {
     text: ['★  https://discord.gg/ExUTWT4  ★\n```diff\n- Invite link updated MARCH.14.2018\n```']
   }
