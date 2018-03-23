@@ -2,8 +2,8 @@ const discordjs = require('discord.js');
 
 const test = require('./textblocks.js').testText;
 
-const samzUser = message.guild.members.get("111980412296839168") // @samzgr8
-// const samzUser = bot.users.get("111980412296839168"); // @samzgr8
+// const samzUser = message.guild.members.get("111980412296839168") // @samzgr8
+const samzUser = bot.users.get("111980412296839168"); // @samzgr8
 
 var embed = function(object){
   if(typeof object !== 'object'){
