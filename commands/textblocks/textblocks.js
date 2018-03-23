@@ -1,3 +1,5 @@
+const discordjs = require('discord.js');
+
 exports.testText = function(message){
   let samzUser = bot.users.get("111980412296839168"); // @samzgr8
   return {
