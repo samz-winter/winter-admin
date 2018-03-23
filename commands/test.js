@@ -9,8 +9,9 @@ module.exports.run = async (bot, message, args) => {
   let adminLog = message.guild.channels.get("423825546087235585"); // #admin_log
   let directMessage = message.guild.member(user);
 
-  let samzID = message.guild.members.get("111980412296839168") // @samzgr8
-
+  // let samzID = message.guild.members.get("111980412296839168") // @samzgr8
+  let samzUser = bot.users.get("111980412296839168"); // @samzgr8
+  
   if(reason === "testing") {
     // directMessage.send(guidelinesPing);
     message.channel.send(responses.test(message))
