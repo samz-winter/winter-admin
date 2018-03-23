@@ -1,7 +1,6 @@
 const discordjs = require('discord.js');
 
 const test = require('./textblocks.js').testText;
-// const help = require('./textblocks.js').help;
 
 var embed = function(object){
   if(typeof object !== 'object'){
@@ -21,8 +20,7 @@ var embed = function(object){
 }
 
 exports.responses = {
-  test: function(bot, message, args){
-    let samzUser = bot.users.get('111980412296839168'); // @samzgr8
-    return embed(test(bot, message, args));
+  test: function(message){
+    return embed(test(message));
   }
 };
