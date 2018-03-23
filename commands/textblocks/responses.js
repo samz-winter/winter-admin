@@ -2,6 +2,7 @@ const discordjs = require('discord.js');
 
 const test = require('./textblocks.js').testText;
 // const help = require('./textblocks.js').help;
+const samzUser = bot.users.get('111980412296839168'); // @samzgr8
 
 var embed = function(object){
   if(typeof object !== 'object'){
