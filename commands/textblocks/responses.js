@@ -1,7 +1,7 @@
 const discordjs = require('discord.js');
 
 const test = require('./textblocks.js').testText;
-const textings = require('./textxxx.js').textxxx
+const textings = require('./textxxx.js').textxxx.testText;
 
 var embed = function(object){
   if(typeof object !== 'object'){
