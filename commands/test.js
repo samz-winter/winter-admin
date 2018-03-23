@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
   
   if(reason === "testing") {
     // directMessage.send(guidelinesPing);
-    message.channel.send(responses.test(message))
+    message.channel.send(responses.test(bot, message, args))
     // adminLog.send(`${user} has been DM'd about community guidelines.`);
     return;
   }
