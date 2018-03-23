@@ -1,6 +1,7 @@
 const discordjs = require('discord.js');
 
 const test = require('./textblocks.js').testText;
+const textings = require('./textxxx.js').textxxx
 
 var embed = function(object){
   if(typeof object !== 'object'){
@@ -21,6 +22,7 @@ var embed = function(object){
 
 exports.responses = {
   test: function(message){
-    return embed(test(message));
+    // return embed(test(message));
+    return embed(testings(message));
   }
 };
