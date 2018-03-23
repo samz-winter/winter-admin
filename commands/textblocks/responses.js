@@ -21,7 +21,7 @@ var embed = function(object){
 }
 
 exports.responses = {
-  test: function(message){
-    return embed(test(message));
+  test: function(bot, message, args){
+    return embed(test(bot, message, args));
   }
 };
