@@ -4,6 +4,7 @@ const fs = require('fs');
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 const prefix = '!';
+const allowedUsers = require('./config.json').allowedUsers;
 const responses = require('./commands/textblocks/responses.js').responses;
 
 fs.readdir("./commands/", (err, files) => {
@@ -47,7 +48,8 @@ bot.on('message', async message => {
   if(message.author.bot) return;
   // if message contains command prefix and author not winterOfficer
   // if(msg.startsWith(prefix) && !message.member.roles.has("211143245445464064")) return; // prefix and not winterOfficer
-  if(msg.startsWith(prefix) && !bot.users.get("111980412296839168")) return; // prefix and not samzgr8
+  // if(msg.startsWith(prefix) && !bot.users.get("111980412296839168")) return; // prefix and not samzgr8
+  if(msg.startsWith(prefix) && !allowedUsers.includes(message.author.id)) return; // prefix and not allowed user IDs
 
 /* NOT WORKING
   // if message mentions winter-admin and author not samzgr8
