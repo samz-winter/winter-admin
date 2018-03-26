@@ -3,8 +3,8 @@
 module.exports.testText = function (bot, message, args) {
   let assets = require('./assets.js').assets;
   return {
-    text: `${assets.samzUser} was coding.\n`
-    + `Banging head against the desk\nWill it ever work?`,
+    text: [`${assets.samzUser} was coding.\n`
+    + `Banging head against the desk\nWill it ever work?`],
     // img: 'http://www.reactiongifs.com/r/magnum.gif',
     footer: [`-samzgr8, 2018`, '']
   }
