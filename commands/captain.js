@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
   let samzID = bot.users.get("111980412296839168");
   let benzID = bot.users.get("213091147059429393");
 
-let inviteLinkText = '★  https://discord.gg/ExUTWT4  ★\n'
+let inviteLinkText = '★  https://discord.gg/Xsf6qTQ  ★\n'
 + '```diff\n'
 + '- Invite link updated MARCH.26.2018\n'
 + '```'
@@ -20,6 +20,7 @@ let captainText = '**THIS IS A READ-ONLY CHANNEL. For issues, please  DM ** ' + 
   let embed = new Discord.RichEmbed()
     .setColor(0x37a0dc)
     .setDescription(captainText);
+    message.delete();
     message.channel.send(inviteLinkText, {embed: embed});
 }
 
