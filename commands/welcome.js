@@ -22,6 +22,7 @@ module.exports.run = async (bot, message, args) => {
   let embed = new Discord.RichEmbed()
     .setColor(0x37a0dc)
     .setDescription(welcomeText);
+    message.delete();
     message.channel.send({embed: embed});
 }
 
