@@ -1,6 +1,8 @@
 const Discord = module.require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
+  let welcomeChat = message.guild.channels.get("413690580410040331")
+  
   let inviteLinkText = '★  https://discord.gg/ExUTWT4  ★\n'
 + '```diff\n- Invite link updated MARCH.26.2018\n```'
   
