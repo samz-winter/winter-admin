@@ -56,6 +56,3 @@ welcome.js      || welcomePost
     .setFooter(pokedFooter);
     message.channel.send({embed: embed});
 */
-  
-}
-
