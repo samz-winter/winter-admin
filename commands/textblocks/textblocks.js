@@ -1,3 +1,4 @@
+const discordjs = require('discord.js');
 const assets = require('./assets.js');
 
 module.exports.testText = function (bot, message, args) {
