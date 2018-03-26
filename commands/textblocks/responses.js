@@ -1,5 +1,5 @@
 const discordjs = require('discord.js');
-const test = require('./textblocks.js');
+const textblocks = require('./textblocks.js');
 
 var embed = function(object){
   if(typeof object !== 'object'){
@@ -20,9 +20,30 @@ var embed = function(object){
 
 exports.responses = {
   test: function(bot, message, args){
-    return embed(test.testText(bot, message, args));
+    return embed(textblocks.testText(bot, message, args));
   },
+  captainPost: function(bot, message, args){
+    return embed(textblocks.captainPost(bot, message, args));
+  }
+  guidelinesPost: function(bot, message, args){
+    return embed(textblocks.guidelinesPost(bot, message, args));
+  }
   inviteLink: function(bot, message, args){
-    return embed(test.inviteLink(bot, message, args));
+    return embed(textblocks.inviteLink(bot, message, args));
+  }
+  invitePost: function(bot, message, args){
+    return embed(textblocks.invitePost(bot, message, args));
+  }
+  shutupPost: function(bot, message, args){
+    return embed(textblocks.shutupPost(bot, message, args));
+  }
+  timeoutPost: function(bot, message, args){
+    return embed(textblocks.timeoutPost(bot, message, args));
+  }
+  underReviewPost: function(bot, message, args){
+    return embed(textblocks.underReviewPost(bot, message, args));
+  }
+  welcomePost: function(bot, message, args){
+    return embed(textblocks.welcomePost(bot, message, args));
   }
 };
