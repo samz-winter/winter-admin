@@ -3,7 +3,7 @@
 module.exports.testText = function (bot, message, args) {
   samzUser: `bot.users.get('111980412296839168')`;
   return {
-    text: `${assets.samzUser} was coding.\n`
+    text: `${samzUser} was coding.\n`
     + `Banging head against the desk\nWill it ever work?`,
     // img: 'http://www.reactiongifs.com/r/magnum.gif',
     footer: [`-samzgr8, 2018`, '']
