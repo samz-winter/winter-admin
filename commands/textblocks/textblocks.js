@@ -1,4 +1,4 @@
-const assets = require('./assets.js');
+const assets = require('./assets.js').assets;
 
 module.exports.testText = function (bot, message, args) {
   return {
