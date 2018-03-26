@@ -1,8 +1,6 @@
-const discordjs = require('discord.js');
-
+const assets = require('./assets.js');
 
 module.exports.testText = function (bot, message, args) {
-  const assets = require('./assets.js');
   return {
     text: `${assets.samzUser} was coding.\n`
     + `Banging head against the desk\nWill it ever work?`,
