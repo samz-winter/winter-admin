@@ -1,6 +1,7 @@
-const assets = require('./assets.js').assets;
+// const assets = require('./assets.js').assets;
 
 module.exports.testText = function (bot, message, args) {
+  let assets = require('./assets.js').assets;
   return {
     text: `${assets.samzUser} was coding.\n`
     + `Banging head against the desk\nWill it ever work?`,
