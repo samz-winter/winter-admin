@@ -1,4 +1,5 @@
 const Discord = module.require('discord.js');
+const ms = require('ms');
 
 module.exports.run = async (bot, message, args) => {
   let reason = args.slice(1).join(' ');
