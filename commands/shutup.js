@@ -20,10 +20,6 @@ module.exports.run = async (bot, message, args) => {
     message.guild.member(user).addRole(muteRole)
   }
   
-  function afterPost() {
-    message.channel.send(`Now ${user} knows what happens when you annoy an officer.`);
-  }
-  
   message.delete().then(() => {
     message.channel.send(`${user} gets 2 minutes in the ${penaltyBox}.`).then(() => {
       setTimeout(addShutup, 5000);
@@ -34,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
     message.guild.member(user).removeRole(muteRole).then(() => {
       setTimeout(afterPost, 5000);
     });
-  }, 30000);
+  }, 120000);
 }
 
 module.exports.help = {
