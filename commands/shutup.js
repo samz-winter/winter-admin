@@ -30,9 +30,11 @@ module.exports.run = async (bot, message, args) => {
     });
   });
 
-  setTimeout(removeShutup, 120000).then(() => {
-    setTimeout(afterPost, 5000);
-  });
+  setTimeout(function() {
+    removeShutup.then(() => {
+      setTimeout(afterPost, 5000);
+    });
+  }, 30000);
 }
 
 module.exports.help = {
