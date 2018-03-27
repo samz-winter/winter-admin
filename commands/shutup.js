@@ -16,8 +16,8 @@ module.exports.run = async (bot, message, args) => {
     message.guild.member(user).addRole(muteRole)
   }
   
-  function removeShutup() {
-    message.guild.member(user).addRole(muteRole)
+  function afterPost() {
+    message.channel.send(`Now ${user} knows what happens when you annoy an officer.`);
   }
   
   message.delete().then(() => {
