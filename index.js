@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const fs = require('fs');
+const ms = require('ms');
 
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
