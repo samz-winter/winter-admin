@@ -13,14 +13,16 @@ module.exports.run = async (bot, message, args) => {
 
   message.delete().then(() => {
     message.guild.member(user).addRole(muteRole).then(() => {
-      message.channel.send(`Now ${user} knows what happens when you annoy an officer.`);
-      adminLog.send(`${user} has been told to shut-up by ` + `<@!` + message.author.id + `>`);
+      message.channel.send(`2 minutes in the #penalty_box.`);
+      // adminLog.send(`${user} has been told to shut-up by ` + `<@!` + message.author.id + `>`);
     });
   });
 
   setTimeout(function() {
-  message.guild.member(user).removeRole(muteRole);
-  }, 10000);
+    message.guild.member(user).removeRole(muteRole);
+  }, 10000).then(() => {
+    message.channel.send(`Now ${user} knows what happens when you annoy an officer.`);
+  });
 }
 
 module.exports.help = {
