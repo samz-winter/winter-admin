@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
   });
 
   setTimeout(function() {
-    removeShutup.then(() => {
+    message.guild.member(user).removeRole(muteRole).then(() => {
       setTimeout(afterPost, 5000);
     });
   }, 30000);
