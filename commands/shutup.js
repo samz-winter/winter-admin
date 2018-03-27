@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
   
   message.delete().then(() => {
     message.channel.send(`2 minutes in the ${penaltyBox}.`).then(() => {
-      setTimeout(addShutup, 10 * 1000);
+      setTimeout(addShutup, 10000);
     });
   });
   
