@@ -20,8 +20,8 @@ module.exports.run = async (bot, message, args) => {
 
   setTimeout(function() {
     message.guild.member(user).removeRole(muteRole);
-  }, 10000);
     message.channel.send(`Now ${user} knows what happens when you annoy an officer.`);
+  }, 10000);
 }
 
 module.exports.help = {
