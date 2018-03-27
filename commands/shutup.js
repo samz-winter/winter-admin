@@ -20,23 +20,19 @@ module.exports.run = async (bot, message, args) => {
     message.guild.member(user).addRole(muteRole)
   }
   
+  function afterPost() {
+    message.channel.send(`Now ${user} knows what happens when you annoy an officer.`);
+  }
+  
   message.delete().then(() => {
-    message.channel.send(`2 minutes in the ${penaltyBox}.`).then(() => {
-      setTimeout(addShutup, 10000);
+    message.channel.send(`${user} gets 2 minutes in the ${penaltyBox}.`).then(() => {
+      setTimeout(addShutup, 5000);
     });
   });
-  
-  /*
-  message.delete().then(() => {
-    message.guild.member(user).addRole(muteRole).then(() => {
-      message.channel.send(`2 minutes in the ${penaltyBox}.`);
-    });
-  });  */
 
-  setTimeout(function() {
-    message.guild.member(user).removeRole(muteRole);
-    message.channel.send(`Now ${user} knows what happens when you annoy an officer.`);
-  }, 120000);
+  setTimeout(removeShutup, 120000).then(() => {
+    setTimeout(afterPost, 5000);
+  });
 }
 
 module.exports.help = {
