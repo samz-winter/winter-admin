@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
 
   setTimeout(function() {
   message.guild.member(user).removeRole(muteRole);
-  } ms(10000));
+  }, ms(10000));
 }
 
 module.exports.help = {
