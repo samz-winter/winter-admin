@@ -1,5 +1,5 @@
 const Discord = module.require('discord.js');
-const ms = module.require('ms');
+// const ms = module.require('ms');
 
 module.exports.run = async (bot, message, args) => {
   let reason = args.slice(1).join(' ');
@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
 
   setTimeout(function() {
   message.guild.member(user).removeRole(muteRole);
-  }, ms(10000));
+  }, 10000);
 }
 
 module.exports.help = {
