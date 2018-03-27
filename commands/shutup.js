@@ -10,9 +10,12 @@ module.exports.run = async (bot, message, args) => {
   if(!muteRole) return message.reply('I cannot find a `@shutup` role.').catch(console.error);
   if(message.mentions.users.size < 1) return message.reply('You must mention someone to shutup.').catch(console.error);
 
-  user.addRole(muteRole).then(() => {
-    message.channel.send(`Now ${user} knows what happens when you annoy an officer.`);
-    adminLog.send(`${user} has been told to shut-up by ` + `<@!` + message.author.id + `>`);
+  message.delete().then(() => {
+    user.addRole(muteRole).then(() => {
+    // message.guild.member(user).addRole(muteRole).then(() => {
+      message.channel.send(`Now ${user} knows what happens when you annoy an officer.`);
+      adminLog.send(`${user} has been told to shut-up by ` + `<@!` + message.author.id + `>`);
+    });
   });
 
   setTimeout(function() {
