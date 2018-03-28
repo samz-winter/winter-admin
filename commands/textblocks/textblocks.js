@@ -32,6 +32,7 @@ module.exports.guidelinesPost = function (bot, message, args) {
     + '**Hate Speech** - Winter does not tolerate attacks on any person or group of people on the basis of gender, religion, race, ethnicity, or sexual orientation. *This includes the casual use of derogatory terms.*\n\n'
     + '**Harassment** - Do not engage in or post content encouraging the harassment of individuals or communities.\n\n'
     + '**Politics, Religion & Finances** - Do not post about these at all. Period.\n\n'
+    + '**Advertising** -  Do not use the Winter server to promote or sell your product or service. This includes unsolicited advertising of game streams. Posts attempting to solicit anything will be removed.\n\n'
     + '**Voice Channels** - Voice channels are reserved for community members gaming *together* or participating in community social events. If you are not actively gaming *with someone else* please use one of the Lobby, LFG, or AFK channels.\n\n'
     + '***Violation of community guidelines may result in your removal from the Winter server and possible reporting to Discord.***\n\n'
     + `Guidelines are subject to change at the discretion of Winter community leadership. If you have any questions about the community guidelines, please **DM** ${samzID}.\n\n`
