@@ -20,6 +20,7 @@ module.exports.run = async (bot, message, args) => {
     // .setAuthor()
     .setColor(0x37a0dc)
     .setDescription(guidelinesText);
+    message.delete();
     message.channel.send({embed: embed});
 }
 
