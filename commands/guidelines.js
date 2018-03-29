@@ -1,6 +1,8 @@
 const Discord = module.require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
+  let samzID = bot.users.get('111980412296839168'); // @samzgr8
+  
   let guidelinesText = '**THE FOLLOWING COMMUNITY GUIDELINES WILL BE ENFORCED FOR ALL WINTER MEMBERS REGARDLESS OF RANK OR POSITION**\n\n'
     + '**(TL;DR - "DON\'T BE A DICK")**\n\n'
     + '**Constructive Discussion** - Please keep public comments and discussions constructive. If you feel like a conversation you\'re having might be inappropriate for public discussion, or if someone tells you it definitely is, please move it to your DMs.\n\n'
