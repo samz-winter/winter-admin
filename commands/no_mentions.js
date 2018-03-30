@@ -2,7 +2,7 @@ const Discord = module.require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
   let member = message.mentions.members.first();
-  let aRole = message.guild.roles.find('name', no_mentions);
+  let aRole = message.guild.roles.find('name', 'no_mentions');
 
   if(!user) return message.reply("User not found");
   if(!aRole) return message.reply("Could not find that role");
