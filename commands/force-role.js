@@ -10,6 +10,7 @@ module.exports.run = async (bot, message, args) => {
   
   console.log(`reason is ${reason} and user is ${user}`);
 
+  if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("no permissions";)
   if(!user) return message.reply("User not found");
   if(!reason) return message.reply("Specifiy a role");
   if(!aRole) return message.reply("Could not find that role");
