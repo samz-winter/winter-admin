@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
   let aRole = message.guild.roles.find('name', 'no_mentions');
   let directMessage = message.guild.member(user);
   
-  console.log(`reason is ${reason} and user is ${user}`);
+  console.log(`user is ${user}`);
 
   if(!message.author.hasPermission("MANAGE_ROLES")) return message.reply("no permissions");
   if(!user) return message.reply("User not found");
