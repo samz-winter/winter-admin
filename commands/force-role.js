@@ -3,7 +3,7 @@ const Discord = module.require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
   let msg = message.content.toLowerCase();
-  let user = message.guild.member(message.mentions.users || message.guild.members.get(args[0])); // .first()
+  let user = message.guild.member(message.mentions.users.id || message.guild.members.get(args[0])); // .first()
   let reason = args.slice(1).join(' ');
   let aRole = message.guild.roles.find('name', reason);
   let directMessage = message.guild.member(user);
