@@ -14,5 +14,8 @@ module.exports.run = async (bot, message, args) => {
   
   if(user.roles.has(aRole.id));
   await(user.addRole(aRole.id));
+}
 
+module.exports.help = {
+  name: "force-add"
 }
