@@ -26,7 +26,8 @@ fs.readdir("./commands/", (err, files) => {
 bot.login(process.env.BOT_TOKEN);
 
 bot.on('ready', () => {
-  bot.user.setPresence({ game: { name: `Moderator` }, type: 0 });
+  // bot.user.setPresence({ game: { name: `Moderator` }, type: 0 });
+  bot.user.setActivity("you", {type: "WATCHING"});
   console.log(`${bot.user.username} Bot Online!`);
 });
 
