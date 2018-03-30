@@ -4,7 +4,7 @@ const Discord = module.require('discord.js');
 module.exports.run = async (bot, message, args) => {
   let msg = message.content.toLowerCase();
   let user = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  let aRole = message.guild.roles.find('name', no_mentions);
+  let aRole = message.guild.roles.find('name', 'no_mentions');
   let directMessage = message.guild.member(user);
   
   console.log(`reason is ${reason} and user is ${user}`);
