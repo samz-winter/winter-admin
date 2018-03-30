@@ -7,11 +7,12 @@ module.exports.run = async (bot, message, args) => {
   let reason = args.slice(0).join(' ');
   let aRole = message.guild.roles.find('name', reason);
   let directMessage = message.guild.member(user);
+  
+  console.log(`reason is ${reason} and user is ${user}`);
 
   if(!user) return message.reply("User not found");
   if(!reason) return message.reply("Specifiy a role");
   if(!aRole) return message.reply("Could not find that role");
-  console.log(`reason is ${reason}`);
   
   if(user.roles.has(aRole.id));
   await(user.addRole(aRole.id));
