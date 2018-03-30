@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
   if(!user) return message.reply("User not found");
   if(!reason) return message.reply("Specifiy a role");
   if(!aRole) return message.reply("Could not find that role");
-  console.log(reason);
+  console.log(`reason is ${reason}`);
   
   if(user.roles.has(aRole.id));
   await(user.addRole(aRole.id));
