@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
   
   console.log(`user is ${user}`);
 
-  if(!message.author.hasPermission("MANAGE_ROLES")) return message.reply("no permissions");
+  if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply("no permissions");
   if(!user) return message.reply("User not found");
   if(!aRole) return message.reply("Could not find that role");
   
