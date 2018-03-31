@@ -1,7 +1,7 @@
 const discordjs = require('discord.js');
 const textblocks = require('./textblocks.js');
 
-var embed = function(object){
+var embedField = function(object){
   if(typeof object !== 'object'){
     object = {
       text: object,
@@ -16,7 +16,24 @@ var embed = function(object){
     // .setAuthor()
     .setColor(0x37a0dc)
     .setDescription(object.text || '')
-    .addField(object.fieldName || '-', object.fieldValue || '')
+    .addField(object.fieldName || '', object.fieldValue || '')
+    .setImage(object.img || '')
+    .setFooter(object.footer || '');
+}
+
+var embed = function(object){
+  if(typeof object !== 'object'){
+    object = {
+      text: object,
+      footer: ['', '']
+    };
+  }
+
+  return new discordjs.RichEmbed()
+    // .setTitle()
+    // .setAuthor()
+    .setColor(0x37a0dc)
+    .setDescription(object.text || '')
     .setImage(object.img || '')
     .setFooter(object.footer || '');
 }
@@ -32,7 +49,7 @@ exports.responses = {
     return embed(textblocks.guidelinesPost(bot, message, args));
   },
   invitePost: function(bot, message, args){
-    return embed(textblocks.invitePost(bot, message, args));
+    return embedField(textblocks.invitePost(bot, message, args));
   },
   penaltyBoxPost: function(bot, message, args){
     return embed(textblocks.penaltyBoxPost(bot, message, args));
