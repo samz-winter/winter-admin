@@ -8,13 +8,6 @@ var embed = function(object){
       footer: ['', '']
     };
   }
-  
-var send = function(object){
-  if(typeof object !== 'object'){
-    object = {
-      text: object
-    };
-  }
 
   return new discordjs.RichEmbed()
     // .setTitle()
@@ -23,6 +16,14 @@ var send = function(object){
     .setDescription(object.text || '')
     .setImage(object.img || '')
     .setFooter(object.footer || '');
+}
+
+var send = function(object){
+  if(typeof object !== 'object'){
+    object = {
+      text: object
+    };
+  }
 }
 
 exports.responses = {
