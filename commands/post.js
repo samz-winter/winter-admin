@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
     return;
   }else if(reason === "invite") {
     message.delete();
-    message.channel.send(responses.inviteLink(bot, message, args))
+    message.channel.send(responses.invitePost(bot, message, args))
     return;
   }else if(reason === "captain") {
     message.delete();
