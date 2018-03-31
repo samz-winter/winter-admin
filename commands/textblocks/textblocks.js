@@ -49,7 +49,7 @@ module.exports.inviteLink = function (bot, message, args) {
 
 module.exports.invitePost = function (bot, message, args) {
   return {
-    text: `The above invite link may be shared as part of any recruiting you are doing, whether amongst friends or openly (Reddit, etc). **This is the only invite link for the server.** If you see anyone in the community asking for an invite link, direct them here. This link will be refreshed every now and then for security. Check back before sharing.\n\n`
+    text: `**This is the only invite link for the server.** If you see anyone in the community asking for an invite link, direct them here. This link will be refreshed every now and then for security. Check back before sharing.\n\n`
     + `***WARNING:*** *Using this link to re-invite someone who has been kicked/banned from the server will result in your removal as well.*`
   }
 };
