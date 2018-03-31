@@ -22,9 +22,6 @@ exports.responses = {
   test: function(bot, message, args){
     return embed(textblocks.testText(bot, message, args));
   },
-  captainLinkAndPost: function(bot, message, args){
-    return embed(textblocks.inviteLink(bot, message, args), textblocks.captainPost(bot, message, args));
-  },
   captainPost: function(bot, message, args){
     return embed(textblocks.captainPost(bot, message, args));
   },
@@ -33,9 +30,6 @@ exports.responses = {
   },
   inviteLink: function(bot, message, args){
     return embed(textblocks.inviteLink(bot, message, args));
-  },
-  inviteLinkAndPost: function(bot, message, args){
-    return embed(textblocks.inviteLink(bot, message, args), textblocks.invitePost(bot, message, args));
   },
   shutupPost: function(bot, message, args){
     return embed(textblocks.shutupPost(bot, message, args));
