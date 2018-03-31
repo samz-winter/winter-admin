@@ -21,14 +21,6 @@ var embed = function(object){
     .setFooter(object.footer || '');
 }
 
-var send = function(object){
-  if(typeof object !== 'object'){
-    object = {
-      text: object
-    };
-  }
-}
-
 exports.responses = {
   test: function(bot, message, args){
     return embed(textblocks.testText(bot, message, args));
@@ -42,8 +34,8 @@ exports.responses = {
   invitePost: function(bot, message, args){
     return embed(textblocks.invitePost(bot, message, args));
   },
-  shutupPost: function(bot, message, args){
-    return embed(textblocks.shutupPost(bot, message, args));
+  penaltyBoxPost: function(bot, message, args){
+    return embed(textblocks.penaltyBoxPost(bot, message, args));
   },
   timeoutPost: function(bot, message, args){
     return embed(textblocks.timeoutPost(bot, message, args));
