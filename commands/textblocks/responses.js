@@ -8,6 +8,13 @@ var embed = function(object){
       footer: ['', '']
     };
   }
+  
+var send = function(object){
+  if(typeof object !== 'object'){
+    object = {
+      text: object
+    };
+  }
 
   return new discordjs.RichEmbed()
     // .setTitle()
@@ -29,7 +36,7 @@ exports.responses = {
     return embed(textblocks.guidelinesPost(bot, message, args));
   },
   inviteLink: function(bot, message, args){
-    return embed(textblocks.inviteLink(bot, message, args));
+    return send(textblocks.inviteLink(bot, message, args));
   },
   shutupPost: function(bot, message, args){
     return embed(textblocks.shutupPost(bot, message, args));
