@@ -3,7 +3,7 @@ const Discord = module.require('discord.js');
 module.exports.run = async (bot, message, args) => {
   let welcomeChat = message.guild.channels.get("413690580410040331")
   
-  let inviteLinkText = '★  https://discord.gg/Xsf6qTQ  ★\n'
+  let inviteLinkText = '★  https://discord.gg/C6y5wSM  ★\n'
 + '```diff\n- Invite link updated MARCH.26.2018\n```'
   
   let inviteText = `The above invite link may be shared as part of any recruiting you are doing, whether amongst friends or openly (Reddit, etc). This invite directs new members to our cool ${welcomeChat} channel which acts as a splash page for the clan and server. From there, they can click through to any other public channel.\n\n`
