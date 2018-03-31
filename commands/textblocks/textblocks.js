@@ -49,7 +49,7 @@ module.exports.invitePost = function (bot, message, args) {
   }
 };
 
-module.exports.shutupPost = function (bot, message, args) {
+module.exports.penaltyBoxPost = function (bot, message, args) {
   return {
     text: '**This is what happens when you annoy an officer.**',
     img: 'https://www.reactiongifs.com/r/ksu.gif',
