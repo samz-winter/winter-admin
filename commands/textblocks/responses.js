@@ -16,7 +16,7 @@ var embed = function(object){
     // .setAuthor()
     .setColor(0x37a0dc)
     .setDescription(object.text || '')
-    .addField(object.fieldName || '', object.fieldValue || '')
+    .addField(object.fieldName || '-', object.fieldValue || '')
     .setImage(object.img || '')
     .setFooter(object.footer || '');
 }
