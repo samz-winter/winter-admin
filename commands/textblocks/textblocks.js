@@ -50,7 +50,9 @@ module.exports.inviteLink = function (bot, message, args) {
 module.exports.invitePost = function (bot, message, args) {
   return {
     text: `**This is the only invite link for the server.** If you see anyone in the community asking for an invite link, direct them here. This link will be refreshed every now and then for security. Check back before sharing.\n\n`
-    + `***WARNING:*** *Using this link to re-invite someone who has been kicked/banned from the server will result in your removal as well.*`
+    + `***WARNING:*** *Using this link to re-invite someone who has been kicked/banned from the server will result in your removal as well.*`,
+    fieldName: '★  https://discord.gg/C6y5wSM  ★\n',
+    fieldValue: '```diff\n- Invite link updated MARCH.31.2018\n```'
   }
 };
 
