@@ -39,8 +39,8 @@ exports.responses = {
   guidelinesPost: function(bot, message, args){
     return embed(textblocks.guidelinesPost(bot, message, args));
   },
-  inviteLink: function(bot, message, args){
-    return send(textblocks.inviteLink(bot, message, args));
+  invitePost: function(bot, message, args){
+    return embed(textblocks.invitePost(bot, message, args));
   },
   shutupPost: function(bot, message, args){
     return embed(textblocks.shutupPost(bot, message, args));
