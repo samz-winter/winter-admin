@@ -45,5 +45,8 @@ exports.responses = {
   },
   welcomePost: function(bot, message, args){
     return embed(textblocks.welcomePost(bot, message, args));
+  },
+  captainLinkAndPost: function(bot, message, args){
+    return embed(textblocks.inviteLink(bot, message, args), textblocks.captainPost(bot, message, args));
   }
 };
