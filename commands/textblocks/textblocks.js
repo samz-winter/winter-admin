@@ -42,8 +42,8 @@ module.exports.guidelinesPost = function (bot, message, args) {
 
 module.exports.inviteLink = function (bot, message, args) {
   return {
-    text: ['★  https://discord.gg/Xsf6qTQ  ★\n'
-    + '```diff\n- Invite link updated MARCH.26.2018\n```']
+    text: ['★  https://discord.gg/C6y5wSM  ★\n'
+    + '```diff\n- Invite link updated MARCH.31.2018\n```']
   }
 };
 
