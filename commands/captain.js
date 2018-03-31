@@ -6,9 +6,9 @@ module.exports.run = async (bot, message, args) => {
   let samzID = bot.users.get("111980412296839168");
   let benzID = bot.users.get("213091147059429393");
 
-let inviteLinkText = '★  https://discord.gg/Xsf6qTQ  ★\n'
+let inviteLinkText = '★  https://discord.gg/C6y5wSM  ★\n'
 + '```diff\n'
-+ '- Invite link updated MARCH.26.2018\n'
++ '- Invite link updated MARCH.31.2018\n'
 + '```'
 
 let captainText = '**THIS IS A READ-ONLY CHANNEL. For issues, please  DM ** ' + `${samzID}` + '.\n\n'
