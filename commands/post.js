@@ -20,17 +20,37 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(responses.test(bot, message, args))
     // adminLog.send(`${user} has been DM'd about community guidelines.`);
     return;
+  }else if(reason === "captain") {
+    message.delete();
+    message.channel.send(responses.captainPost(bot, message, args))
+    return;
+  }else if(reason === "guidelines") {
+    message.delete();
+    message.channel.send(responses.guidelinesPost(bot, message, args))
+    return;
   }else if(reason === "invite") {
     message.delete();
-    message.channel.send(inviteLink, responses.invitePost(bot, message, args))
+    message.channel.send(responses.invitePost(bot, message, args))
     return;
   }else if(reason === "invite link") {
     message.delete();
-    message.channel.send('★  https://discord.gg/C6y5wSM  ★\n```diff\n- Invite link updated MARCH.31.2018\n```')
+    message.channel.send('★  https://discord.gg/C6y5wSM  ★\n```diff\n- Invite link updated MAR.31.2018\n```')
     return;
-  }else if(reason === "captain") {
+  }else if(reason === "penalty box") {
     message.delete();
-    message.channel.send(responses.captainLinkAndPost(bot, message, args))
+    message.channel.send(responses.penaltyBoxPost(bot, message, args))
+    return;
+  }else if(reason === "timeout") {
+    message.delete();
+    message.channel.send(responses.timeoutPost(bot, message, args))
+    return;
+  }else if(reason === "under review") {
+    message.delete();
+    message.channel.send(responses.underReviewPost(bot, message, args))
+    return;
+  }else if(reason === "welcome") {
+    message.delete();
+    message.channel.send(responses.welcomePost(bot, message, args))
     return;
   }
 }
