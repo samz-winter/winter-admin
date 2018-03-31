@@ -23,7 +23,7 @@ exports.responses = {
     return embed(textblocks.testText(bot, message, args));
   },
   captainLinkAndPost: function(bot, message, args){
-    return embed(textblocks.captainPost(bot, message, args), textblocks.inviteLink(bot, message, args));
+    return embed(textblocks.inviteLink(bot, message, args), textblocks.captainPost(bot, message, args));
   },
   captainPost: function(bot, message, args){
     return embed(textblocks.captainPost(bot, message, args));
