@@ -12,6 +12,8 @@ module.exports.run = async (bot, message, args) => {
   let reason = args.slice(0).join(' ');
   let adminLog = message.guild.channels.get("423825546087235585"); // #admin_log
   let directMessage = message.guild.member(user);
+  let inviteLink = '★  https://discord.gg/C6y5wSM  ★\n'
+    + '```diff\n- Invite link updated MARCH.31.2018\n```'
 
   if(reason === "testing") {
     // directMessage.send(guidelinesPing);
@@ -21,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
     return;
   }else if(reason === "invite") {
     message.delete();
-    message.channel.send(responses.invitePost(bot, message, args))
+    message.channel.send(inviteLink, responses.invitePost(bot, message, args))
     return;
   }else if(reason === "captain") {
     message.delete();
