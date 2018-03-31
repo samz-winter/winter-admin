@@ -5,6 +5,8 @@ var embed = function(object){
   if(typeof object !== 'object'){
     object = {
       text: object,
+      fieldName: object,
+      fieldValue: object,
       footer: ['', '']
     };
   }
@@ -14,6 +16,7 @@ var embed = function(object){
     // .setAuthor()
     .setColor(0x37a0dc)
     .setDescription(object.text || '')
+    .setField(object.fieldName || '', object.fieldValue || '')
     .setImage(object.img || '')
     .setFooter(object.footer || '');
 }
